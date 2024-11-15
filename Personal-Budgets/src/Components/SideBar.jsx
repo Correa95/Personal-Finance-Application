@@ -1,10 +1,12 @@
-import "./SideBar.css";
 import { Link } from "react-router-dom";
+import { GiHamburgerMenu } from "react-icons/gi";
+import "./SideBar.css";
 function SideBar() {
   return (
     <aside className="sideBar">
-      <div className="logo">
-        <h1>Condanne</h1>
+      <div className="logoContainer">
+        <GiHamburgerMenu className="hamburgerMenu" />
+        <h1 className="logo">Condanne</h1>
       </div>
       <nav>
         <ul>

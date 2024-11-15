@@ -3,16 +3,25 @@
   padding: 0;
   box-sizing: border-box;
 }
+:root {
+  --primary-color: #f9faef;
+  --secondary-color: #fff;
+  --text-color: #212121;
+  --saving-color: #277c78;
+  --concert-color: #626070;
+  --gift-color: #82c9d7;
+  --holiday-color: #826cb0;
+  --laptop-color: #f2cdac;
+}
 .app {
+  background-color: var(--primary-color);
   height: 100vh;
   display: grid;
   grid-template-columns: 300px 1fr;
   grid-template-rows: 100px 1fr;
 }
 .header {
-  border: 2px solid red;
-  color: #212121;
-  background-color: #fff;
+  color: var(--text-color);
   grid-column: 2/3;
   grid-row: 1/2;
 }
@@ -21,12 +30,13 @@ h1 {
   margin: 30px;
 }
 .side {
+  background-color: var(--secondary-color);
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 0 20px 20px 0;
 
-  border: 2px solid #212121;
+  border: 2px solid var(--text-color);
   grid-row: 1/3;
   grid-column: 1/2;
 }
@@ -35,8 +45,6 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid red;
-  /* background-color: #333; */
   grid-row: 2/3;
   grid-column: 2/3;
 }

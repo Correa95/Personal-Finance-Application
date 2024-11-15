@@ -1,16 +1,18 @@
 .sideBar {
   height: 100vh;
-  /* display: flex; */
-  /* flex-direction: column;
-  justify-content: center;
-  align-items: center; */
+}
+.logoContainer {
+  display: flex;
+  border: 2px solid red;
+}
+.hamburgerMenu {
+  font-size: 30px;
 }
 
-.logo h1 {
+.logo {
   font-family: "Popping" sans-serif;
   font-size: 33px;
   color: #212121;
-  margin-top: 50px;
   text-align: center;
 }
 nav {
