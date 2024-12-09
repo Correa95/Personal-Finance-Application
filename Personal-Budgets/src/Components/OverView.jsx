@@ -77,41 +77,68 @@ function OverView() {
             </div>
           </div> */}
           {/* /////////////////////////////// */}
-          <div className="transaction">
+          {/* <div className="transaction">
             <div className="top">
               <small className="btn">View All</small>
               <h1>Transaction</h1>
             </div>
             <div className="con">
-              {data.transactions.slice(0, 6).map((transaction) => {
+              {data.transactions.slice(0, 1).map((transaction) => {
+                const formattedDate = new Date(
+                  transaction.date
+                ).toLocaleDateString("en-GB", {
+                  day: "2-digit",
+                  month: "short",
+                  year: "numeric",
+                });
+
                 return (
                   <>
                     <div className="imgName">
-                      <img src={transaction.avatar} alt="avatar" />
+                      <img
+                        src={transaction.avatar}
+                        alt="avatar"
+                        className="img"
+                      />
                       <h4>{transaction.name}</h4>
                     </div>
                     <div className="dateAmount">
-                      <h5>{transaction.amount}</h5>
-                      <h4>{transaction.date}</h4>
+                      <h4>{transaction.amount}</h4>
+                      <h5>{formattedDate}</h5>
                     </div>
                   </>
                 );
               })}
             </div>
-          </div>
+          </div> */}
         </div>
-        {/* <div className="card2">
-          <div className="budget">
+        <div className="card2">
+          {/* <div className="budget">
             <div className="top">
               <h1>Budgets</h1>
             </div>
-          </div>
-          <div className="recurBill">
+          </div> */}
+          <div className="recurBills">
             <div className="top">
+              <small className="btn">See All</small>
               <h1>Recurring Bills</h1>
             </div>
+            <div className="bills">
+              <div className="paidBills">
+                <h2 className="paid">mathew</h2>
+                <h2 className="bill">10000</h2>
+              </div>
+              <div className="totalUpcoming">
+                <h2 className="totalUp">mario</h2>
+                <h2 className="upcoming">10000</h2>
+              </div>
+              <div className="dueSoon">
+                <h2 className="due">correa</h2>
+                <h2 className="soon">10000</h2>
+              </div>
+            </div>
           </div>
-        </div> */}
+        </div>
       </div>
     </section>
   );
