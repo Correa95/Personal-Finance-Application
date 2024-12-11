@@ -1,5 +1,6 @@
 .sideBar {
   height: 100vh;
+  position: fixed;
 }
 .logoContainer {
   display: flex;
