@@ -12,9 +12,7 @@ function App() {
       <aside className="side">
         <SideBar />
       </aside>
-      <header className="header">
-        <h1>Overview</h1>
-      </header>
+
       <main className="main">
         <Routes>
           <Route path="/" element={<OverView />} />

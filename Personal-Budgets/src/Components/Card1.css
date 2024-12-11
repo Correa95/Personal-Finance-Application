@@ -1,0 +1,147 @@
+.card1 {
+  width: 55%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  /* border: 2px solid red; */
+}
+
+.top {
+  /* border: 2px solid red; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.btn {
+  border: none;
+  background-color: non#fff;
+}
+.pot {
+  background-color: var(--secondary-color);
+  height: 35%;
+  border-radius: 15px;
+  border: 2px solid #212121;
+  padding: 10px;
+  margin-left: 10px;
+}
+.expenditureContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.totalSave {
+  background-color: var(--secondary-color);
+  width: 80%;
+  height: 60%;
+  /* border: 2px solid red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.total {
+  text-align: center;
+  background-color: var(--primary-color);
+}
+h3 span {
+  font-size: 30px;
+  font-weight: 600;
+  margin-left: 10px;
+}
+.expenditure {
+  background-color: var(--secondary-color);
+  width: 100%;
+  height: 60%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  /* border: 2px solid red; */
+}
+.saving {
+  background-color: var(--secondary-color);
+  /* margin: 10px; */
+  padding: 10px;
+  text-align: center;
+  border-left: 5px solid var(--saving-color);
+  border-radius: 4px;
+}
+.gift {
+  background-color: var(--secondary-color);
+  /* margin: 10px; */
+  padding: 10px;
+  text-align: center;
+  border-left: 5px solid var(--gift-color);
+
+  border-radius: 4px;
+}
+.laptop {
+  background-color: var(--secondary-color);
+  /* margin: 10px; */
+  padding: 10px;
+  text-align: center;
+  border-left: 5px solid var(--laptop-color);
+  border-radius: 4px;
+}
+.concert {
+  background-color: var(--secondary-color);
+  /* margin: 10px; */
+  padding: 10px;
+  text-align: center;
+  border-left: 5px solid var(--concert-color);
+  border-radius: 4px;
+}
+/* //////////////////////// */
+.transaction {
+  background-color: var(--secondary-color);
+  height: 75%;
+  border-radius: 15px;
+  border: 2px solid #212121;
+  padding: 10px;
+  margin-left: 10px;
+}
+.con {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* border: 2px solid red; */
+}
+.cla {
+  width: 100%;
+  height: 60px;
+  margin: 20px;
+  display: flex;
+  justify-content: space-between;
+  /* border: 2px solid red; */
+}
+.imgName {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+img {
+  width: 60px;
+  height: 60px;
+  margin: 10px;
+  border: 2px solid red;
+  border-radius: 50%;
+}
+.dateAmount {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.img {
+  width: 100px;
+  height: 100px;
+  border-radius: 15px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+  margin-right: 20px;
+}
