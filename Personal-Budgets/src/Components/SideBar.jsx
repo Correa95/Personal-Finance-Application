@@ -1,11 +1,10 @@
 import { Link } from "react-router-dom";
-import { GiHamburgerMenu } from "react-icons/gi";
+
 import "./SideBar.css";
 function SideBar() {
   return (
     <aside className="sideBar">
       <div className="logoContainer">
-        <GiHamburgerMenu className="hamburgerMenu" />
         <h1 className="logo">Condanne</h1>
       </div>
       <nav>
@@ -27,9 +26,9 @@ function SideBar() {
           </li>
         </ul>
       </nav>
-      <div className="min">
+      {/* <div className="min">
         <button>Minimize Menu</button>
-      </div>
+      </div> */}
     </aside>
   );
 }

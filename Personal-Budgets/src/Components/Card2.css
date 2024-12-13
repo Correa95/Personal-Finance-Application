@@ -1,118 +1,86 @@
 .card2 {
-  width: 45%;
-  height: 100%;
-  margin: 10px;
-}
-.budget {
-  background-color: var(--secondary-color);
-  height: 35%;
-  border-radius: 15px;
-  border: 2px solid #212121;
-  padding: 10px;
-  margin-left: 10px;
-}
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.chart {
-  width: 75%;
-  height: 300px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.category {
-  width: 25%;
-  height: 300px;
-  font-size: 12px;
-  color: #333;
-}
-.entertainmentAmount {
-  height: 50px;
-  margin: 10px;
-  border-radius: 5px 0px 0px 5px;
-  border-left: 5px solid var(--saving-color);
-}
-.amountBill {
-  height: 50px;
-  margin: 10px;
-  border-radius: 5px 0px 0px 5px;
-  border-left: 5px solid var(--gift-color);
-}
-.dinningOut {
-  height: 50px;
-  margin: 10px;
-  border-radius: 5px 0px 0px 5px;
-  border-left: 5px solid var(--laptop-color);
-}
-.personalCare {
-  height: 50px;
-  margin: 10px;
-  border-radius: 5px 0px 0px 5px;
-  border-left: 5px solid var(--concert-color);
-}
-h2 {
-  margin-left: 20px;
-}
-/* ///////////////////////// */
-.recurBills {
-  height: 400px;
-  border-radius: 15px;
-  color: var(--text-color);
-  background-color: var(--secondary-color);
-
-  border: 2px solid #212121;
-  padding: 10px;
-  margin-left: 10px;
-  margin-top: 10px;
-}
-
-.bills {
+  width: 100%;
+  max-width: 800px;
+  margin: 10px auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 20px;
+  gap: 20px;
 }
 
-.paidBills {
+.budget,
+.recurBills {
+  background-color: var(--secondary-color);
+  border-radius: 15px;
+  border: 2px solid #212121;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.chart {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+}
+
+.category {
+  width: 100%;
+  max-width: 300px;
   font-size: 12px;
   color: #333;
-  width: 100%;
-  height: 70px;
+}
+
+.entertainmentAmount,
+.amountBill,
+.dinningOut,
+.personalCare {
+  height: auto;
+  margin: 10px 0;
+  padding: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 5px;
-  padding: 20px;
-  border-radius: 10px;
-  border-left: 5px solid var(--saving-color);
+  border-radius: 5px;
+  border-left: 5px solid;
 }
-.totalUpcoming {
-  font-size: 12px;
-  color: #333;
-  width: 100%;
-  height: 70px;
+
+.recurBills .bills {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin: 5px;
-  padding: 20px;
-  border-radius: 10px;
-  border-left: 5px solid var(--laptop-color);
+  /* flex-wrap: wrap; */
+  gap: 10px;
 }
+
+.paidBills,
+.totalUpcoming,
 .dueSoon {
-  font-size: 12px;
-  color: #333;
   width: 100%;
-  height: 70px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 5px;
-  padding: 20px;
+  max-width: 300px;
+  padding: 15px;
   border-radius: 10px;
-  border-left: 5px solid var(--gift-color);
+}
+
+@media (max-width: 768px) {
+  .card2 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .chart,
+  .category,
+  .bills div {
+    width: 100%;
+  }
+
+  h2 {
+    font-size: 16px;
+    margin: 5px 0;
+  }
 }
