@@ -1,12 +1,14 @@
 import data from "../data/data.json";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 import { Doughnut } from "react-chartjs-2";
-
+import { useNavigate } from "react-router-dom";
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 import "./Card2.css";
 
 function Card2() {
+  const navigate = useNavigate();
+
   // Function to get the resolved color for a CSS variable
   const getCSSVariableColor = (variableName) =>
     getComputedStyle(document.documentElement)
@@ -72,7 +74,9 @@ function Card2() {
       <div className="budget">
         <div className="top">
           <h1>Budgets</h1>
-          <button className="btn">See Details</button>
+          <button className="btn" onClick={() => navigate("/budgets")}>
+            See Details
+          </button>
         </div>
         <div className="container">
           <div className="chart">
@@ -135,7 +139,9 @@ function Card2() {
       <div className="recurBills">
         <div className="top">
           <h1>Recurring Bills</h1>
-          <button className="btn">See All</button>
+          <button className="btn" onClick={() => navigate("/recurringBills")}>
+            See All
+          </button>
         </div>
 
         <div className="bills">

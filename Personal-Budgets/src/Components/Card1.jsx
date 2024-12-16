@@ -1,8 +1,10 @@
 import "./Card1.css";
 import { FaSackDollar } from "react-icons/fa6";
 import data from "../data/data.json";
+import { useNavigate } from "react-router-dom";
 
 function Card1() {
+  const navigate = useNavigate();
   // const { avatar, name, amount, date } = data.transactions;
 
   return (
@@ -10,7 +12,9 @@ function Card1() {
       <div className="pot">
         <div className="top">
           <h1>Pots</h1>
-          <button className="btn">View All</button>
+          <button className="btn" onClick={() => navigate("/pots")}>
+            View All
+          </button>
         </div>
         <div className="expenditureContainer">
           <div className="totalSave">
@@ -50,7 +54,9 @@ function Card1() {
       <div className="transaction">
         <div className="top">
           <h1>Transaction</h1>
-          <button className="btn">View All</button>
+          <button className="btn" onClick={() => navigate("/transaction")}>
+            View All
+          </button>
         </div>
         <div className="con">
           {data.transactions.slice(0, 5).map((transaction) => {
@@ -71,7 +77,7 @@ function Card1() {
                     <h4>{transaction.name}</h4>
                   </div>
                   <div className="dateAmount">
-                    <h4>{transaction.amount}</h4>
+                    <h4>$ {transaction.amount}</h4>
                     <h5>{formattedDate}</h5>
                   </div>
                 </div>
