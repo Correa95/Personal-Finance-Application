@@ -7,7 +7,7 @@ function Pots() {
     <div className="pots">
       <h1 className="title">Pots</h1>
 
-      <div className="expenditureCon">
+      <div className="expenditureTain">
         <div className="totalSave">
           <div className="total">
             <h1>Total Save</h1>
@@ -17,23 +17,23 @@ function Pots() {
             </h3>
           </div>
         </div>
-        <div className="expenditure">
-          <div className="saving">
+        <div className="expense">
+          <div className="sav">
             <small>Saving</small>
             <FaSackDollar />
             <span>300</span>
           </div>
-          <div className="gift">
+          <div className="gif">
             <small>gift</small>
             <FaSackDollar />
             <span>150</span>
           </div>
-          <div className="concert">
+          <div className="party">
             <small>Concert Tickets</small>
             <FaSackDollar />
             <span>50</span>
           </div>
-          <div className="laptop">
+          <div className="lap">
             <small>New Laptop</small>
             <FaSackDollar />
             <span>100</span>

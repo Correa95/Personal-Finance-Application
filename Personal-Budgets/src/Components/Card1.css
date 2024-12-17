@@ -34,9 +34,6 @@
 
 .expenditureContainer {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 10px;
 }
 
 .totalSave {
@@ -60,7 +57,6 @@ h3 span {
 }
 
 .expenditure {
-  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-template-rows: 2;
   gap: 10px;
@@ -74,10 +70,10 @@ h3 span {
   padding: 10px;
   text-align: center;
   border-left: 5px solid;
+  margin: 10px;
   border-radius: 4px;
 }
 
-/* Transaction Section */
 .transaction {
   background-color: var(--secondary-color);
   border-radius: 15px;
@@ -138,7 +134,9 @@ h5 {
   }
 
   .expenditure {
-    grid-template-columns: repeat(2, 1fr);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
   }
 
   .transaction {

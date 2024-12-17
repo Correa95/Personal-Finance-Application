@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import SideBar from "./Components/SideBar";
 import OverView from "./Components/OverView";
@@ -6,14 +7,30 @@ import Budgets from "./Components/Budgets";
 import Pots from "./Components/Pots";
 import RecurringBills from "./Components/RecurringBills";
 import "./App.css";
+
 function App() {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+  const handleToggleSidebar = () => {
+    setIsSidebarOpen((prev) => !prev);
+  };
+
   return (
     <div className="app">
-      <aside className="side">
+      <button
+        className="hamburger"
+        onClick={handleToggleSidebar}
+        aria-label="Toggle menu"
+      >
+        ☰
+      </button>
+
+      <aside className={`side ${isSidebarOpen ? "open" : ""}`}>
         <SideBar />
       </aside>
 
       <main className="main">
+        <h1 className="overViewHeader">OverView</h1>
         <Routes>
           <Route path="/" element={<OverView />} />
           <Route path="/transaction" element={<Transactions />} />
@@ -22,6 +39,11 @@ function App() {
           <Route path="/recurringBill" element={<RecurringBills />} />
         </Routes>
       </main>
+
+      {/* Overlay for closing the sidebar */}
+      {isSidebarOpen && (
+        <div className="overlay" onClick={handleToggleSidebar}></div>
+      )}
     </div>
   );
 }
