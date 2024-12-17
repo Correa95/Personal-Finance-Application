@@ -7,47 +7,53 @@ function RecurringBills() {
 
     const paidBills = transactions
       .filter(
-        (t) => t.category === "Bills" && t.recurring && new Date(t.date) < today
+        (transaction) =>
+          transaction.category === "Bills" &&
+          transaction.recurring &&
+          new Date(transaction.date) < today
       )
-      .reduce((acc, t) => acc + Math.abs(t.amount), 0);
+      .reduce((acc, cur) => acc + Math.abs(cur.amount), 0);
 
     const upcomingBills = transactions
       .filter(
-        (t) => t.category === "Bills" && t.recurring && new Date(t.date) > today
+        (transaction) =>
+          transaction.category === "Bills" &&
+          transaction.recurring &&
+          new Date(transaction.date) > today
       )
-      .reduce((acc, t) => acc + Math.abs(t.amount), 0);
+      .reduce((acc, cur) => acc + Math.abs(cur.amount), 0);
 
     const dueSoonBills = transactions
       .filter(
-        (t) =>
-          t.category === "Bills" &&
-          !t.recurring &&
-          new Date(t.date) >= today &&
-          new Date(t.date) <= new Date(today.setDate(today.getDate() + 7))
+        (transaction) =>
+          transaction.category === "Bills" &&
+          !transaction.recurring &&
+          new Date(transaction.date) >= today &&
+          new Date(transaction.date) <=
+            new Date(today.setDate(today.getDate() + 7))
       )
-      .reduce((acc, t) => acc + Math.abs(t.amount), 0);
+      .reduce((acc, cur) => acc + Math.abs(cur.amount), 0);
 
     return { paidBills, upcomingBills, dueSoonBills };
   };
+  const { paidBills, upcomingBills, dueSoonBills } =
+    calculateBills(transactions);
   return (
     <div className="recurBills">
-      <div className="top">
-        <h1>Recurring Bills</h1>
-        <button className="btn">See All</button>
-      </div>
+      <h1 className="title">Recurring Bills</h1>
 
       <div className="bills">
         <div className="paidBills">
           <h2 className="paid">Paid Bills</h2>
-          <h2 className="bill">${paidBills}</h2>
+          <h2 className="bill">$ {paidBills}</h2>
         </div>
         <div className="totalUpcoming">
           <h2 className="totalUp">Upcoming Bills</h2>
-          <h2 className="upcoming">${upcomingBills}</h2>
+          <h2 className="upcoming">$ {upcomingBills}</h2>
         </div>
         <div className="dueSoon">
           <h2 className="due">Due Soon</h2>
-          <h2 className="soon">${dueSoonBills}</h2>
+          <h2 className="soon">$ {dueSoonBills}</h2>
         </div>
       </div>
     </div>

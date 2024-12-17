@@ -1,6 +1,6 @@
 import data from "../data/data.json";
-import "./Transaction.css";
-function Transaction() {
+import "./Transactions.css";
+function Transactions() {
   return (
     <div className="transactions">
       <h1 className="title">Transaction</h1>
@@ -36,4 +36,4 @@ function Transaction() {
   );
 }
 
-export default Transaction;
+export default Transactions;

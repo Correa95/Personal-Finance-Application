@@ -1,6 +1,6 @@
 .budgets {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   background-color: var(--secondary-color);
   padding: 10px;
   margin: 10px 0;
@@ -9,7 +9,6 @@
 .containerDiagram {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 20px;
@@ -24,9 +23,10 @@
 .categories {
   width: 100%;
   display: flex;
-  justify-content: space-evenly;
-  max-width: 300px;
-  font-size: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  font-size: 14px;
   color: #333;
 }
 
@@ -34,12 +34,47 @@
 .amountBill,
 .dinningOut,
 .personalCare {
-  height: auto;
-  margin: 10px 0;
+  flex: 1 1 calc(50% - 20px);
+  min-width: 150px;
+  margin: 10px;
   padding: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-radius: 5px;
   border-left: 5px solid;
+  background-color: #f9f9f9;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 768px) {
+  .chart {
+    max-width: 250px;
+  }
+
+  .categories {
+    font-size: 12px;
+  }
+
+  .entertainmentAmount,
+  .amountBill,
+  .dinningOut,
+  .personalCare {
+    flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .chart {
+    max-width: 200px;
+  }
+
+  .categories {
+    gap: 5px;
+  }
 }

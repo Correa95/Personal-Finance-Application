@@ -1,4 +1,5 @@
 import { FaSackDollar } from "react-icons/fa6";
+
 import "./Pots.css";
 
 function Pots() {
