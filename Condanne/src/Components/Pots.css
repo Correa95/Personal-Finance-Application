@@ -1,0 +1,107 @@
+.pots {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--secondary-color);
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.expenditureCon {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.totalSave {
+  flex: 1 1 100%;
+  background-color: var(--secondary-color);
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.total {
+  background-color: var(--primary-color);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+h3 span {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-left: 10px;
+}
+
+.expense {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.sav,
+.gif,
+.lap,
+.party {
+  background-color: var(--secondary-color);
+  padding: 10px;
+  text-align: center;
+  border-left: 5px solid var(--primary-color);
+  border-radius: 4px;
+  flex: 1 1 calc(50% - 20px);
+  max-width: calc(50% - 20px);
+}
+
+.sav small,
+.gif small,
+.lap small,
+.party small {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .expenditureTain {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .totalSave {
+    flex: 1 1 100%;
+  }
+
+  .sav,
+  .gif,
+  .lap,
+  .party {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .totalSave {
+    padding: 30px;
+  }
+
+  .sav,
+  .gif,
+  .lap,
+  .party {
+    flex: 1 1 calc(25% - 20px);
+    max-width: calc(25% - 20px);
+  }
+}
