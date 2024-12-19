@@ -36,7 +36,6 @@ function OverView() {
             </h2>
           </div>
         </div>
-        {/* ////////////////////////////////////// */}
       </section>
       <section className="extra">
         <Card1 />

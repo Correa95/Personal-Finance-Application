@@ -37,24 +37,9 @@
   color: #333;
 }
 
-.entertainmentAmount,
-.amountBill,
-.dinningOut,
-.personalCare {
-  height: auto;
-  margin: 10px 0;
-  padding: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 5px;
-  border-left: 5px solid;
-}
-
 .recurBills .bills {
   display: flex;
   justify-content: space-between;
-  /* flex-wrap: wrap; */
   gap: 10px;
 }
 

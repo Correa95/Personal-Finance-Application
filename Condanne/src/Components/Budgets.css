@@ -51,7 +51,6 @@
   margin-bottom: 20px;
 }
 
-/* MEDIA QUERIES */
 @media (max-width: 768px) {
   .chart {
     max-width: 250px;

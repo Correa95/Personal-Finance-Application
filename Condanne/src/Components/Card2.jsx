@@ -9,7 +9,6 @@ import "./Card2.css";
 function Card2() {
   const navigate = useNavigate();
 
-  // Function to get the resolved color for a CSS variable
   const getCSSVariableColor = (variableName) =>
     getComputedStyle(document.documentElement)
       .getPropertyValue(variableName)
@@ -27,16 +26,16 @@ function Card2() {
           )
           .map((budget) => budget.maximum),
         backgroundColor: [
-          getCSSVariableColor("--saving-color"), // Matches .entertainmentAmount
-          getCSSVariableColor("--gift-color"), // Matches .amountBill
-          getCSSVariableColor("--laptop-color"), // Matches .dinningOut
-          getCSSVariableColor("--concert-color"), // Matches .personalCare
+          getCSSVariableColor("--saving-color"),
+          getCSSVariableColor("--gift-color"),
+          getCSSVariableColor("--laptop-color"),
+          getCSSVariableColor("--concert-color"),
         ],
         borderWidth: 0,
       },
     ],
   };
-  ///////////////////////////////
+
   const transactions = data.transactions;
   const calculateBills = (transactions) => {
     const today = new Date();
@@ -89,7 +88,7 @@ function Card2() {
           <div className="chart">
             <Doughnut data={chartData} />
           </div>
-          {/* /////////////// */}
+
           <div className="category">
             {data.budgets
               .filter((budget) =>
@@ -108,6 +107,7 @@ function Card2() {
                       <div
                         className="entertainmentAmount"
                         key={budget.category}
+                        style={{ borderLeft: `4px solid ${budget.theme}` }}
                       >
                         <h2 className="entertainment" key={budget.category}>
                           Entertainment
@@ -117,21 +117,33 @@ function Card2() {
                     );
                   case "Bills":
                     return (
-                      <div className="amountBill" key={budget.category}>
+                      <div
+                        className="amountBill"
+                        key={budget.category}
+                        style={{ borderLeft: `4px solid ${budget.theme}` }}
+                      >
                         <h2 className="bill">Bills</h2>
                         <h2 className="amount">$ {budget.maximum}</h2>
                       </div>
                     );
                   case "Dining Out":
                     return (
-                      <div className="dinningOut" key={budget.category}>
+                      <div
+                        className="dinningOut"
+                        key={budget.category}
+                        style={{ borderLeft: `4px solid ${budget.theme}` }}
+                      >
                         <h2 className="dinning">Dining Out</h2>
                         <h2 className="out">$ {budget.maximum}</h2>
                       </div>
                     );
                   case "Personal Care":
                     return (
-                      <div className="personalCare" key={budget.category}>
+                      <div
+                        className="personalCare"
+                        key={budget.category}
+                        style={{ borderLeft: `4px solid ${budget.theme}` }}
+                      >
                         <h2 className="personal">Personal Care</h2>
                         <h2 className="care">$ {budget.maximum}</h2>
                       </div>

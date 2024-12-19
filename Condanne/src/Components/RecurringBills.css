@@ -1,8 +1,8 @@
-.recurBills .bills {
+.recurring .bills {
+  width: 100%;
+  height: 100vh;
   display: flex;
   justify-content: space-between;
-  /* flex-wrap: wrap; */
-  gap: 10px;
 }
 
 .paidBills,

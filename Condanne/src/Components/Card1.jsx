@@ -5,7 +5,9 @@ import { useNavigate } from "react-router-dom";
 
 function Card1() {
   const navigate = useNavigate();
-  // const { avatar, name, amount, date } = data.transactions;
+  const pots = data.pots;
+  const totalSaved = pots.reduce((sum, pot) => sum + pot.total, 0);
+  console.log(totalSaved);
 
   return (
     <div className="card1">
@@ -22,35 +24,33 @@ function Card1() {
               <h1>Total Save</h1>
               <h3>
                 <FaSackDollar />
-                <span>3000</span>
+                <span>{totalSaved.toFixed(2)}</span>
               </h3>
             </div>
           </div>
+
           <div className="expenditure">
-            <div className="saving">
-              <small>Saving</small>
-              <FaSackDollar />
-              <span>300</span>
-            </div>
-            <div className="gift">
-              <small>gift</small>
-              <FaSackDollar />
-              <span>150</span>
-            </div>
-            <div className="concert">
-              <small>Concert Tickets</small>
-              <FaSackDollar />
-              <span>50</span>
-            </div>
-            <div className="laptop">
-              <small>New Laptop</small>
-              <FaSackDollar />
-              <span>100</span>
-            </div>
+            {pots.slice(0, 3).map((pot, index) => (
+              <div
+                key={index}
+                className={pot.name.toLowerCase().replace(/\s+/g, "-")}
+                style={{
+                  borderLeft: `10px solid ${pot.theme}`,
+                  padding: "10px",
+                  textalign: "center",
+                  paddingLeft: "8px",
+                  marginBottom: "8px",
+                }}
+              >
+                <small>{pot.name}</small>
+                <FaSackDollar />
+                <span>{pot.total.toFixed(2)}</span>
+              </div>
+            ))}
           </div>
         </div>
       </div>
-      {/* /////////////////////////////// */}
+
       <div className="transaction">
         <div className="top">
           <h1>Transaction</h1>

@@ -4,9 +4,8 @@ import "./SideBar.css";
 function SideBar() {
   return (
     <aside className="sideBar">
-      {/* <div className="logoContainer"> */}
       <h1 className="logo">Condanne</h1>
-      {/* </div> */}
+
       <nav>
         <ul>
           <li>
@@ -30,7 +29,7 @@ function SideBar() {
             </Link>
           </li>
           <li>
-            <Link className="customLink" to="/recurringBills">
+            <Link className="customLink" to="/recurringBill">
               Recurring Bills
             </Link>
           </li>

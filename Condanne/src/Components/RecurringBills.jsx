@@ -39,7 +39,7 @@ function RecurringBills() {
   const { paidBills, upcomingBills, dueSoonBills } =
     calculateBills(transactions);
   return (
-    <div className="recurBills">
+    <div className="recurring">
       <h1 className="title">Recurring Bills</h1>
 
       <div className="bills">
