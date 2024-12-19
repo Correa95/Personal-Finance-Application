@@ -1,8 +1,8 @@
+import { FaDollarSign } from "react-icons/fa6";
 import data from "../data/data.json";
 import Card1 from "./Card1";
 import Card2 from "./Card2";
-import "./Overview.css";
-import { FaDollarSign } from "react-icons/fa6";
+import "./OverView.css";
 
 function OverView() {
   const { current, income, expenses } = data.balance;
