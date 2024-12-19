@@ -39,10 +39,6 @@ function App() {
           <Route path="/recurringBill" element={<RecurringBills />} />
         </Routes>
       </main>
-
-      {isSidebarOpen && (
-        <div className="overlay" onClick={handleToggleSidebar}></div>
-      )}
     </div>
   );
 }
